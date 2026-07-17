@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing &amp; Research — Robert Dowd</title>
+<meta name="description" content="Peer-reviewed research, industry writing, and notes on data strategy, leadership, and healthcare by Robert Dowd.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1c2b3a;--navy:#1b3a6b;--amber:#b9761c;--amber-soft:#f3e7d2;
+  --paper:#f2efe7;--paper-2:#ece8de;--card:#fbfaf6;--line:#ddd8cc;--line-soft:#e6e1d6;
+  --gray:#586471;--gray-light:#8b909a;--radius:10px;
+  --shadow:0 1px 2px rgba(28,43,58,.04), 0 6px 20px rgba(28,43,58,.05);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Public Sans',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.serif{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.15}
+a{color:var(--navy);text-decoration:none}
+a:hover{color:var(--amber)}
+.wrap{max-width:900px;margin:0 auto;padding:0 24px}
+
+nav{position:sticky;top:0;z-index:50;background:rgba(242,239,231,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:1080px;margin:0 auto;padding:0 24px}
+.logo{font-family:'Fraunces',serif;font-size:19px;font-weight:600;color:var(--ink)}
+.logo span{color:var(--amber)}
+.nav-links{display:flex;gap:24px;font-size:14.5px;font-weight:500;align-items:center}
+.nav-links a{color:var(--gray)}
+.nav-links a:hover{color:var(--ink)}
+.nav-links a.current{color:var(--ink);font-weight:600}
+.nav-cta{background:var(--navy);color:#fff !important;padding:8px 18px;border-radius:6px;font-weight:600}
+.nav-cta:hover{background:var(--ink)}
+@media(max-width:820px){.nav-links a:not(.nav-cta){display:none}}
+.nav-back{font-size:14px;color:var(--gray);font-weight:500}
+.nav-back:hover{color:var(--ink)}
+
+.page-head{padding:64px 0 20px}
+.page-head .eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);font-weight:600;display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.page-head .eyebrow::before{content:'';width:26px;height:2px;background:var(--amber)}
+.page-head h1{font-size:clamp(34px,5vw,48px);letter-spacing:-.01em}
+.page-head p{margin-top:16px;color:var(--gray);font-size:18px;max-width:620px}
+
+.group{padding:44px 0 8px}
+.group-label{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);font-weight:700;padding-bottom:12px;border-bottom:1.5px solid var(--line);margin-bottom:8px}
+
+.entry{
+  display:block;padding:26px 0;border-bottom:1px solid var(--line-soft);
+  transition:padding-left .15s ease;
+}
+.entry:hover{padding-left:8px}
+a.entry:hover h3{color:var(--amber)}
+.entry .meta{display:flex;gap:10px;align-items:center;font-size:12.5px;color:var(--gray-light);margin-bottom:8px;flex-wrap:wrap}
+.entry .venue{color:var(--amber);font-weight:600;letter-spacing:.04em;text-transform:uppercase;font-size:11.5px}
+.entry .cite{background:var(--amber-soft);color:#7a4e10;font-weight:600;padding:2px 9px;border-radius:99px;font-size:11.5px}
+.entry h3{font-size:20px;margin-bottom:8px;color:var(--ink);line-height:1.3}
+.entry p{color:var(--gray);font-size:15px}
+.entry .arrow{color:var(--amber);font-weight:700}
+
+.scholar-cta{margin-top:24px;padding:26px 28px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.scholar-cta div h4{font-family:'Fraunces',serif;font-size:18px;margin-bottom:4px}
+.scholar-cta div p{font-size:14px;color:var(--gray)}
+.scholar-cta a{white-space:nowrap;background:var(--navy);color:#fff;padding:11px 20px;border-radius:8px;font-weight:600;font-size:14.5px}
+.scholar-cta a:hover{background:var(--ink);color:#fff}
+
+.notes-empty{padding:30px 0 10px;color:var(--gray);font-size:15.5px;font-style:italic;font-family:'Fraunces',serif}
+
+footer{padding:48px 0 60px;margin-top:40px;border-top:1px solid var(--line)}
+.foot{display:flex;justify-content:space-between;align-items:center;font-size:13.5px;color:var(--gray-light);flex-wrap:wrap;gap:10px}
+.foot a{font-weight:600}
+:focus-visible{outline:2.5px solid var(--amber);outline-offset:2px;border-radius:4px}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
+@media(max-width:560px){.scholar-cta{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Robert Dowd<span>.</span></a>
+    <div class="nav-links">
+      <a href="index.html#about">About</a>
+      <a href="services.html">Services</a>
+      <a href="work.html">Work</a>
+      <a href="writing.html" class="current">Writing</a>
+      <a href="manifesto.html">Manifesto</a>
+      <a href="resume.html">Resume</a>
+      <a href="index.html#contact" class="nav-cta">Get in touch</a>
+    </div>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="wrap">
+    <div class="eyebrow">Writing &amp; Research</div>
+    <h1>Thinking, in public.</h1>
+    <p>Peer-reviewed research, industry writing, and occasional notes on data strategy, leadership, and healthcare technology.</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="group reveal">
+    <div class="group-label">Peer-reviewed research</div>
+
+    <a class="entry" href="https://scholar.google.com/citations?user=zTZrk2YAAAAJ&hl=en" target="_blank" rel="noopener">
+      <div class="meta"><span class="venue">JMIR Diabetes · 2023</span><span class="cite">10 citations</span><span>First author</span></div>
+      <h3>Glycemic outcomes and feature-set engagement among real-time CGM users with Type 1 or non-insulin-treated Type 2 diabetes</h3>
+      <p>Real-world evidence connecting how patients engage with device features to their downstream clinical outcomes. <span class="arrow">Read →</span></p>
+    </a>
+
+    <a class="entry" href="https://scholar.google.com/citations?user=zTZrk2YAAAAJ&hl=en" target="_blank" rel="noopener">
+      <div class="meta"><span class="venue">Diabetes Technology &amp; Therapeutics · 2021</span><span class="cite">68 citations</span></div>
+      <h3>Real-world evidence and glycemic improvement using Dexcom G6 features</h3>
+      <p>Foundational real-world evidence quantifying feature-level clinical impact across a large CGM user population. <span class="arrow">Read →</span></p>
+    </a>
+
+    <a class="entry" href="https://scholar.google.com/citations?user=zTZrk2YAAAAJ&hl=en" target="_blank" rel="noopener">
+      <div class="meta"><span class="venue">Diabetologia · 2020</span></div>
+      <h3>Real-time CGM usage and estimates of glycaemic control among individuals with Type 1 or Type 2 diabetes</h3>
+      <p>Population-level analysis of continuous glucose monitoring usage patterns and their relationship to glycemic control. <span class="arrow">Read →</span></p>
+    </a>
+
+    <div class="scholar-cta">
+      <div>
+        <h4>84 citations · h-index 3</h4>
+        <p>Full publication list, conference presentations, and patents.</p>
+      </div>
+      <a href="https://scholar.google.com/citations?user=zTZrk2YAAAAJ&hl=en" target="_blank" rel="noopener">View on Google Scholar →</a>
+    </div>
+  </section>
+
+  <section class="group reveal">
+    <div class="group-label">Industry writing</div>
+    <a class="entry" href="https://medium.com/data-science/future-proof-the-value-of-your-data-science-capability-269c1dfb5452" target="_blank" rel="noopener">
+      <div class="meta"><span class="venue">Towards Data Science</span></div>
+      <h3>Future-proof the value of your data science capability</h3>
+      <p>On building data science functions that stay valuable as organizations mature and the technology underneath them keeps shifting. <span class="arrow">Read →</span></p>
+    </a>
+  </section>
+
+  <section class="group reveal">
+    <div class="group-label">Notes &amp; Essays</div>
+    <p class="notes-empty">Short essays on data strategy and leadership — coming soon. First up: what a decade of undocumented systems taught me about organizational clarity.</p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div><a href="index.html">← Back to the site</a></div>
+    <div>© 2026 Robert Dowd · Denver, Colorado</div>
+  </div>
+</footer>
+
+<script>
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

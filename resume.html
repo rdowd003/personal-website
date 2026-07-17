@@ -28,9 +28,12 @@ nav{position:sticky;top:0;z-index:50;background:rgba(242,239,231,.9);backdrop-fi
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
 .logo{font-family:'Fraunces',serif;font-size:19px;font-weight:600;color:var(--ink)}
 .logo span{color:var(--amber)}
-.nav-links{display:flex;gap:26px;font-size:14.5px;font-weight:500;align-items:center}
+.nav-links{display:flex;gap:24px;font-size:14.5px;font-weight:500;align-items:center}
 .nav-links a{color:var(--gray)}
 .nav-links a:hover{color:var(--ink)}
+.nav-links a.current{color:var(--ink);font-weight:600}
+.nav-cta{background:var(--navy);color:#fff !important;padding:8px 18px;border-radius:6px;font-weight:600}
+.nav-cta:hover{background:var(--ink)}
 .back{display:inline-flex;align-items:center;gap:7px}
 
 .btn{display:inline-block;padding:11px 22px;border-radius:8px;font-weight:600;font-size:14.5px;transition:all .15s;cursor:pointer;font-family:inherit}
@@ -89,7 +92,7 @@ footer{padding:32px 0;border-top:1px solid var(--line)}
 
 @media(max-width:640px){
   .sheet{padding:36px 26px}
-  .nav-links a:not(.back){display:none}
+  .nav-links a:not(.nav-cta){display:none}
 }
 @media print{
   nav,footer,.r-actions{display:none}
@@ -105,7 +108,13 @@ footer{padding:32px 0;border-top:1px solid var(--line)}
   <div class="wrap nav-inner">
     <a href="index.html" class="logo">Robert Dowd<span>.</span></a>
     <div class="nav-links">
-      <a href="index.html" class="back">← Back to site</a>
+      <a href="index.html#about">About</a>
+      <a href="services.html">Services</a>
+      <a href="work.html">Work</a>
+      <a href="writing.html">Writing</a>
+      <a href="manifesto.html">Manifesto</a>
+      <a href="resume.html" class="current">Resume</a>
+      <a href="index.html#contact" class="nav-cta">Get in touch</a>
     </div>
   </div>
 </nav>
@@ -118,11 +127,12 @@ footer{padding:32px 0;border-top:1px solid var(--line)}
       <span>rdowd006@gmail.com</span><span>·</span>
       <a href="https://linkedin.com/in/rdowd003" target="_blank" rel="noopener">linkedin.com/in/rdowd003</a><span>·</span>
       <a href="https://github.com/rdowd003" target="_blank" rel="noopener">github.com/rdowd003</a><span>·</span>
+      <a href="https://scholar.google.com/citations?user=zTZrk2YAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a><span>·</span>
       <span>Denver, CO</span>
     </div>
     <div class="r-actions">
-      <!-- Replace href with your open-access Google Drive PDF link -->
-      <a href="#" class="btn btn-primary" id="pdfLink">Download PDF ↓</a>
+      <!-- Drop your PDF into the repo as Robert_Dowd_Resume.pdf and this button just works -->
+      <a href="Robert_Dowd_Resume.pdf" class="btn btn-primary" id="pdfLink" target="_blank">Download PDF ↓</a>
       <a href="index.html" class="btn btn-ghost">Back to site</a>
     </div>
   </div>
@@ -251,9 +261,14 @@ footer{padding:32px 0;border-top:1px solid var(--line)}
 </footer>
 
 <script>
-// If the PDF link hasn't been set yet, make the button trigger the browser's print-to-PDF as a fallback.
-document.getElementById('pdfLink').addEventListener('click', function(e){
-  if(this.getAttribute('href') === '#'){ e.preventDefault(); window.print(); }
+// Fallback: if the PDF file isn't in the repo yet, the link 404s — send it to print-to-PDF instead.
+document.getElementById('pdfLink').addEventListener('click', async function(e){
+  e.preventDefault();
+  const href = this.getAttribute('href');
+  try {
+    const r = await fetch(href, {method:'HEAD'});
+    if (r.ok) { window.open(href, '_blank'); } else { window.print(); }
+  } catch { window.print(); }
 });
 </script>
 </body>

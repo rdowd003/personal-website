@@ -158,10 +158,11 @@ section{padding:92px 0}
 .work-item{
   background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
   padding:36px 34px;display:grid;grid-template-columns:1fr 210px;gap:30px;
-  transition:border-color .15s;box-shadow:var(--shadow);
+  transition:border-color .15s;box-shadow:var(--shadow);color:var(--ink);
 }
 .work-item:hover{border-color:var(--amber)}
-.work-item h3{font-size:22px;margin-bottom:12px}
+.work-item:hover h3{color:var(--amber)}
+.work-item h3{font-size:22px;margin-bottom:12px;transition:color .15s}
 .work-item p{color:var(--gray);font-size:15.5px}
 .work-meta{border-left:1px solid var(--line);padding-left:26px;display:flex;flex-direction:column;gap:14px;justify-content:center}
 .work-meta .stat .n{font-family:'Fraunces',serif;font-size:24px;font-weight:600;color:var(--navy)}
@@ -267,10 +268,11 @@ footer{padding:36px 0;border-top:1px solid var(--line)}
     <a href="#top" class="logo">Robert Dowd<span>.</span></a>
     <div class="nav-links">
       <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#work">Work</a>
-      <a href="#manifesto">Manifesto</a>
-      <a href="#assessment">Assessment</a>
+      <a href="services.html">Services</a>
+      <a href="work.html">Work</a>
+      <a href="writing.html">Writing</a>
+      <a href="manifesto.html">Manifesto</a>
+      <a href="resume.html">Resume</a>
       <a href="#contact" class="nav-cta">Get in touch</a>
     </div>
   </div>
@@ -366,32 +368,18 @@ footer{padding:36px 0;border-top:1px solid var(--line)}
       <div class="svc reveal">
         <div class="svc-kind">Track 01</div>
         <h3>Strategy &amp; Advisory</h3>
-        <p class="lead">For leaders who need clarity on where data and AI create real value — and a plan to get there.</p>
-        <ul>
-          <li>Data &amp; AI strategy: use-case prioritization, build-vs-buy, ROI frameworks</li>
-          <li>Operational strategy &amp; org design for data functions</li>
-          <li>KPI &amp; metric frameworks that align teams on what matters</li>
-          <li>Fractional data / analytics leadership</li>
-          <li>Digital health &amp; real-world evidence strategy</li>
-        </ul>
+        <p class="lead">For leaders who need clarity on where data and AI create real value — and a plan to get there. Data &amp; AI strategy, operational and org design, KPI frameworks, and fractional analytics leadership.</p>
         <div class="svc-foot">Best for founders, operators, and executive teams.</div>
       </div>
       <div class="svc reveal">
         <div class="svc-kind">Track 02</div>
         <h3>Technical &amp; Hands-On</h3>
-        <p class="lead">For teams that need someone who can actually build — not just advise on it.</p>
-        <ul>
-          <li>Data science projects: modeling, forecasting, risk &amp; segmentation</li>
-          <li>Data engineering &amp; warehouse / pipeline architecture</li>
-          <li>Analytics layer &amp; BI design (Looker, dashboards, metric stores)</li>
-          <li>Data quality, monitoring &amp; governance systems</li>
-          <li>AI/ML proof-of-concept design and evaluation</li>
-        </ul>
+        <p class="lead">For teams that need someone who can actually build — not just advise on it. Data science, engineering &amp; pipeline architecture, BI design, data quality systems, and AI/ML proofs-of-concept.</p>
         <div class="svc-foot">Best for teams needing senior delivery, freelance or embedded.</div>
       </div>
     </div>
     <div class="svc-cta reveal">
-      <a href="#contact">Explore consulting services →</a>
+      <a href="services.html">See services, engagement models &amp; mentorship →</a>
     </div>
   </div>
 </section>
@@ -404,48 +392,43 @@ footer{padding:36px 0;border-top:1px solid var(--line)}
       <p>A few programs I've owned end-to-end — from diagnosis through execution.</p>
     </div>
     <div class="work-list">
-      <div class="work-item reveal">
+      <a class="work-item reveal" href="work.html">
         <div>
           <h3>Enterprise data transformation</h3>
-          <p>Program-managed a two-year, company-wide transformation with no upstream documentation, data contracts, or defined requirements. Redesigned the warehouse around a new identity-management system, established governance, and built the analytics layer the executive team now runs the business on — acting as internal consultant between engineering and every non-technical function.</p>
+          <p>Program-managed a two-year, company-wide transformation with no upstream documentation, data contracts, or defined requirements. Redesigned the warehouse, established governance, and built the analytics layer the executive team now runs the business on.</p>
           <div class="work-tags"><span>Program leadership</span><span>Data governance</span><span>Change management</span></div>
         </div>
         <div class="work-meta">
           <div class="stat"><div class="n">50%</div><div class="l">Monthly pipeline cost reduction</div></div>
           <div class="stat"><div class="n">2x</div><div class="l">Client growth supported</div></div>
         </div>
-      </div>
-      <div class="work-item reveal">
+      </a>
+      <a class="work-item reveal" href="work.html">
         <div>
           <h3>Retention &amp; engagement measurement strategy</h3>
-          <p>Designed and executed a proprietary member engagement index from first principles — diagnosed the measurement gaps, brokered KPI definitions across Marketing, Member Services, and Clinical, and delivered the executive-ready metric now driving segmentation and campaign strategy across the member journey.</p>
+          <p>Designed and executed a proprietary member engagement index from first principles — diagnosed the gaps, brokered KPI definitions across Marketing, Member Services, and Clinical, and delivered the executive-ready metric now driving segmentation and campaign strategy.</p>
           <div class="work-tags"><span>KPI strategy</span><span>Cross-functional alignment</span><span>Data products</span></div>
         </div>
         <div class="work-meta">
           <div class="stat"><div class="n">1</div><div class="l">Metric the whole company agrees on</div></div>
           <div class="stat"><div class="n">3</div><div class="l">Departments aligned on definitions</div></div>
         </div>
-      </div>
-      <div class="work-item reveal">
+      </a>
+      <a class="work-item reveal" href="work.html">
         <div>
           <h3>Real-world evidence program — Dexcom</h3>
-          <p>Architected and led a multi-year, cross-functional evidence program aligning Clinical, Regulatory, Marketing, and Sales — supporting FDA submissions and market expansion into APAC and Eastern Europe. Scoped and delivered a patented AI-driven algorithm for personalized care, and presented the research on international stages.</p>
+          <p>Architected and led a multi-year, cross-functional evidence program aligning Clinical, Regulatory, Marketing, and Sales — supporting FDA submissions and market expansion into APAC and Eastern Europe. Scoped and delivered a patented AI-driven algorithm for personalized care.</p>
           <div class="work-tags"><span>Program architecture</span><span>Regulatory strategy</span><span>Patented AI</span></div>
         </div>
         <div class="work-meta">
           <div class="stat"><div class="n">3</div><div class="l">Peer-reviewed papers, 84 citations</div></div>
           <div class="stat"><div class="n">2</div><div class="l">Global regions expanded</div></div>
         </div>
-      </div>
+      </a>
     </div>
 
-    <div class="deck-feature reveal">
-      <div>
-        <div class="eyebrow">Featured artifact</div>
-        <h3>Sample strategy deck</h3>
-        <p>A representative example of how I frame a data &amp; AI strategy for an executive audience — from diagnosis to phased roadmap. Coming soon; a shareable, embeddable walkthrough you can send to a team.</p>
-      </div>
-      <div class="deck-ph"><span>Deck preview — coming soon</span></div>
+    <div class="svc-cta reveal">
+      <a href="work.html">Read the full case studies →</a>
     </div>
   </div>
 </section>
@@ -477,7 +460,7 @@ footer{padding:36px 0;border-top:1px solid var(--line)}
         <div class="practice">"When someone asks me for the answer, I show them how I'd find it, then hand it back. Next time they won't need to ask."</div>
       </div>
     </div>
-    <div class="mani-more reveal"><a href="#contact">Read the full manifesto →</a></div>
+    <div class="mani-more reveal"><a href="manifesto.html">Read the full manifesto →</a></div>
   </div>
 </section>
 
@@ -513,21 +496,24 @@ footer{padding:36px 0;border-top:1px solid var(--line)}
       <p>Peer-reviewed research, industry writing, and occasional notes on data, leadership, and healthcare.</p>
     </div>
     <div class="writing-grid">
-      <a class="write-card reveal" href="https://scholar.google.com" target="_blank" rel="noopener">
-        <div class="w-kind">Peer-reviewed</div>
-        <h3>Glycemic outcomes and feature engagement among real-time CGM users</h3>
-        <p>JMIR Diabetes, 2023 — first author. Real-world evidence connecting product engagement to clinical outcomes.</p>
+      <a class="write-card reveal" href="https://scholar.google.com/citations?user=zTZrk2YAAAAJ&hl=en" target="_blank" rel="noopener">
+        <div class="w-kind">Peer-reviewed research</div>
+        <h3>Published research on real-world evidence &amp; CGM outcomes</h3>
+        <p>Peer-reviewed work across JMIR Diabetes, Diabetes Technology &amp; Therapeutics, and Diabetologia — 84 citations. View the full profile on Google Scholar.</p>
       </a>
-      <a class="write-card reveal" href="https://scholar.google.com" target="_blank" rel="noopener">
-        <div class="w-kind">Peer-reviewed</div>
-        <h3>Real-world evidence and glycemic improvement using Dexcom G6 features</h3>
-        <p>Diabetes Technology &amp; Therapeutics, 2021 — 68 citations. Foundational RWE for feature-level clinical impact.</p>
+      <a class="write-card reveal" href="https://medium.com/data-science/future-proof-the-value-of-your-data-science-capability-269c1dfb5452" target="_blank" rel="noopener">
+        <div class="w-kind">Towards Data Science</div>
+        <h3>Future-proof the value of your data science capability</h3>
+        <p>An essay for Towards Data Science on building data science functions that stay valuable as organizations and technology evolve.</p>
       </a>
       <div class="write-card reveal">
         <div class="w-kind">Coming soon</div>
         <h3>Notes on data strategy &amp; leadership</h3>
         <p>Occasional essays — starting with what a decade of undocumented systems taught me about organizational clarity.</p>
       </div>
+    </div>
+    <div class="svc-cta reveal">
+      <a href="writing.html">See all writing &amp; research →</a>
     </div>
   </div>
 </section>
