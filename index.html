@@ -70,8 +70,9 @@ nav{
   font-size:clamp(36px,5vw,54px);font-weight:500;letter-spacing:-.01em;
 }
 .hero h1 em{font-style:italic;color:var(--amber)}
-.hero .sub{margin-top:26px;max-width:540px;font-size:18.5px;color:var(--gray)}
-.hero-ctas{margin-top:36px;display:flex;gap:14px;flex-wrap:wrap}
+.hero .sub{margin-top:26px;max-width:560px;font-size:18.5px;color:var(--gray)}
+.hero-ctas{margin-top:36px;display:flex;gap:12px;flex-wrap:wrap}
+.hero-ctas .btn{flex:0 0 auto}
 .btn{
   display:inline-block;padding:13px 26px;border-radius:8px;font-weight:600;font-size:15.5px;
   transition:all .15s ease;cursor:pointer;font-family:inherit;
@@ -82,20 +83,19 @@ nav{
 .btn-ghost:hover{border-color:var(--amber);color:var(--amber)}
 
 /* portrait */
-.portrait-col{display:flex;flex-direction:column;gap:24px;max-width:330px;margin-left:auto;width:100%}
+.portrait-col{display:flex;flex-direction:column;gap:18px;max-width:330px;margin-left:auto;width:100%}
 .portrait-frame{position:relative;width:100%;aspect-ratio:3/4;border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:var(--paper-2)}
 .portrait{
   width:100%;height:100%;object-fit:cover;object-position:center top;display:block;
 }
+/* location tag — deliberately NOT button-like: transparent, no card, pin icon */
 .portrait-badge{
-  background:var(--card);border:1px solid var(--line);border-radius:10px;
-  padding:12px 18px;box-shadow:var(--shadow);text-align:center;
+  display:flex;align-items:center;gap:11px;padding:2px 4px;text-align:left;
 }
-.portrait-badge .t{font-family:'Fraunces',serif;font-size:15px;color:var(--ink);font-weight:600}
-.portrait-badge .d{font-size:12px;color:var(--gray)}
-.portrait-links{display:flex;gap:12px}
-.portrait-links .btn-sm{flex:1;text-align:center}
-.btn-sm{padding:10px 18px;font-size:14.5px}
+.portrait-badge .pin{color:var(--amber);flex-shrink:0;display:flex}
+.portrait-badge .pin svg{width:20px;height:20px}
+.portrait-badge .t{font-family:'Fraunces',serif;font-size:15px;color:var(--ink);font-weight:600;line-height:1.2}
+.portrait-badge .d{font-size:12.5px;color:var(--gray);line-height:1.3}
 @media(max-width:820px){
   .hero-grid{grid-template-columns:1fr;gap:40px}
   .portrait-col{max-width:340px;margin:0 auto}
@@ -268,7 +268,6 @@ footer{padding:36px 0;border-top:1px solid var(--line)}
     <a href="#top" class="logo">Robert Dowd<span>.</span></a>
     <div class="nav-links">
       <a href="#about">About</a>
-      <a href="services.html">Services</a>
       <a href="work.html">Work</a>
       <a href="writing.html">Writing</a>
       <a href="manifesto.html">Manifesto</a>
@@ -285,13 +284,16 @@ footer{padding:36px 0;border-top:1px solid var(--line)}
       <h1>I turn data into <em>decisions</em>, and build the teams that own them.</h1>
       <p class="sub">
         I'm Robert — a strategic leader who works where strategy, operations, and
-        technology meet. For eleven years across digital health, I've diagnosed the gaps,
+        technology meet. For over a decade across healthcare, digital health, health tech,
+        and healthcare IT — from research labs to startups — I've diagnosed the gaps,
         built the frameworks, and aligned the people so organizations can decide with
         confidence instead of guesswork.
       </p>
       <div class="hero-ctas">
         <a href="#work" class="btn btn-primary">See the work</a>
-        <a href="#assessment" class="btn btn-ghost">Data maturity assessment</a>
+        <a href="#assessment" class="btn btn-primary">Data maturity assessment</a>
+        <a href="https://linkedin.com/in/rdowd003" target="_blank" rel="noopener" class="btn btn-primary">LinkedIn</a>
+        <a href="resume.html" class="btn btn-primary">Resume / CV</a>
       </div>
     </div>
     <div class="portrait-col reveal">
@@ -299,12 +301,13 @@ footer{padding:36px 0;border-top:1px solid var(--line)}
         <img class="portrait" src="portrait.jpg" alt="Robert Dowd, Data &amp; Strategy Leader" width="900" height="1200">
       </div>
       <div class="portrait-badge">
-        <div class="t">Denver, Colorado</div>
-        <div class="d">Open to leadership &amp; consulting</div>
-      </div>
-      <div class="portrait-links">
-        <a href="https://linkedin.com/in/rdowd003" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">LinkedIn</a>
-        <a href="resume.html" class="btn btn-ghost btn-sm">Resume / CV</a>
+        <span class="pin" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s7-5.3 7-11a7 7 0 1 0-14 0c0 5.7 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        </span>
+        <div>
+          <div class="t">Denver, Colorado</div>
+          <div class="d">Open to leadership &amp; consulting</div>
+        </div>
       </div>
     </div>
   </div>
@@ -353,33 +356,6 @@ footer{padding:36px 0;border-top:1px solid var(--line)}
         <h3>Teams that outgrow their leader</h3>
         <p>Building and mentoring data teams, brokering alignment across functions, and designing structures that run without their architect — because that's the point.</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<section id="services">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div class="eyebrow">How to work with me</div>
-      <h2>Two ways in.</h2>
-      <p>Whether you need a strategic partner in the room or a builder who can go hands-on, I work across both — as a leader, an advisor, or a fractional resource.</p>
-    </div>
-    <div class="svc-grid">
-      <div class="svc reveal">
-        <div class="svc-kind">Track 01</div>
-        <h3>Strategy &amp; Advisory</h3>
-        <p class="lead">For leaders who need clarity on where data and AI create real value — and a plan to get there. Data &amp; AI strategy, operational and org design, KPI frameworks, and fractional analytics leadership.</p>
-        <div class="svc-foot">Best for founders, operators, and executive teams.</div>
-      </div>
-      <div class="svc reveal">
-        <div class="svc-kind">Track 02</div>
-        <h3>Technical &amp; Hands-On</h3>
-        <p class="lead">For teams that need someone who can actually build — not just advise on it. Data science, engineering &amp; pipeline architecture, BI design, data quality systems, and AI/ML proofs-of-concept.</p>
-        <div class="svc-foot">Best for teams needing senior delivery, freelance or embedded.</div>
-      </div>
-    </div>
-    <div class="svc-cta reveal">
-      <a href="services.html">See services, engagement models &amp; mentorship →</a>
     </div>
   </div>
 </section>
@@ -514,6 +490,33 @@ footer{padding:36px 0;border-top:1px solid var(--line)}
     </div>
     <div class="svc-cta reveal">
       <a href="writing.html">See all writing &amp; research →</a>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">How to work with me</div>
+      <h2>Two ways in.</h2>
+      <p>Whether you need a strategic partner in the room or a builder who can go hands-on, I work across both — as a leader, an advisor, or a fractional resource.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc reveal">
+        <div class="svc-kind">Track 01</div>
+        <h3>Strategy &amp; Advisory</h3>
+        <p class="lead">For leaders who need clarity on where data and AI create real value — and a plan to get there. Data &amp; AI strategy, operational and org design, KPI frameworks, and fractional analytics leadership.</p>
+        <div class="svc-foot">Best for founders, operators, and executive teams.</div>
+      </div>
+      <div class="svc reveal">
+        <div class="svc-kind">Track 02</div>
+        <h3>Technical &amp; Hands-On</h3>
+        <p class="lead">For teams that need someone who can actually build — not just advise on it. Data science, engineering &amp; pipeline architecture, BI design, data quality systems, and AI/ML proofs-of-concept.</p>
+        <div class="svc-foot">Best for teams needing senior delivery, freelance or embedded.</div>
+      </div>
+    </div>
+    <div class="svc-cta reveal">
+      <a href="services.html">See services, engagement models &amp; mentorship →</a>
     </div>
   </div>
 </section>
