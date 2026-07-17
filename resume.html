@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Robert Dowd — Resume</title>
+<meta name="description" content="Resume of Robert Dowd — Data & Strategy Leader in healthcare technology.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1c2b3a;--navy:#1b3a6b;--amber:#b9761c;--amber-soft:#f3e7d2;
+  --paper:#f2efe7;--paper-2:#ece8de;--card:#fbfaf6;--line:#ddd8cc;--line-soft:#e6e1d6;
+  --gray:#586471;--gray-light:#8b909a;--radius:10px;
+  --shadow:0 1px 2px rgba(28,43,58,.04), 0 6px 20px rgba(28,43,58,.05);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Public Sans',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.serif{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.15}
+a{color:var(--navy);text-decoration:none}
+a:hover{color:var(--amber)}
+.wrap{max-width:900px;margin:0 auto;padding:0 24px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:rgba(242,239,231,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:'Fraunces',serif;font-size:19px;font-weight:600;color:var(--ink)}
+.logo span{color:var(--amber)}
+.nav-links{display:flex;gap:26px;font-size:14.5px;font-weight:500;align-items:center}
+.nav-links a{color:var(--gray)}
+.nav-links a:hover{color:var(--ink)}
+.back{display:inline-flex;align-items:center;gap:7px}
+
+.btn{display:inline-block;padding:11px 22px;border-radius:8px;font-weight:600;font-size:14.5px;transition:all .15s;cursor:pointer;font-family:inherit}
+.btn-primary{background:var(--navy);color:#fff;border:1.5px solid var(--navy)}
+.btn-primary:hover{background:var(--ink);color:#fff}
+.btn-ghost{border:1.5px solid var(--line);color:var(--ink);background:var(--card)}
+.btn-ghost:hover{border-color:var(--amber);color:var(--amber)}
+
+/* header block */
+.r-head{padding:56px 0 30px;text-align:center}
+.r-head h1{font-size:clamp(32px,5vw,44px);color:var(--navy)}
+.r-head .tagline{margin-top:12px;color:var(--gray);font-size:16.5px}
+.r-head .contact{margin-top:16px;font-size:14px;color:var(--gray-light);display:flex;flex-wrap:wrap;gap:6px 14px;justify-content:center}
+.r-actions{margin-top:26px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+/* resume sheet */
+.sheet{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:52px 56px;margin-bottom:70px}
+.r-section{margin-top:38px}
+.r-section:first-child{margin-top:0}
+.r-section > h2{
+  font-family:'Public Sans',sans-serif;font-size:13px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--amber);font-weight:600;padding-bottom:8px;border-bottom:1.5px solid var(--line);margin-bottom:18px;
+}
+.summary{font-size:15.5px;color:#3a4653}
+
+.job{margin-bottom:24px}
+.job:last-child{margin-bottom:0}
+.job-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.job-head .co{font-weight:600;font-size:16.5px;color:var(--ink)}
+.job-head .loc{color:var(--gray-light);font-weight:400;font-size:14px}
+.job-head .dates{font-size:13.5px;color:var(--gray-light);white-space:nowrap}
+.job .title{font-style:italic;font-family:'Fraunces',serif;color:var(--navy);font-size:15px;margin:2px 0 12px}
+.job ul{list-style:none}
+.job li{position:relative;padding:4px 0 4px 20px;font-size:14.5px;color:#3a4653}
+.job li::before{content:'';position:absolute;left:0;top:12px;width:6px;height:6px;border-radius:2px;background:var(--amber)}
+.job li b{color:var(--ink);font-weight:600}
+.job.compact .title{margin-bottom:0}
+
+.edu-row{display:flex;justify-content:space-between;gap:16px;padding:7px 0;font-size:14.5px;border-bottom:1px solid var(--line-soft)}
+.edu-row:last-child{border-bottom:none}
+.edu-row b{color:var(--ink)}
+.edu-row .r{color:var(--gray-light);font-size:13.5px;text-align:right}
+
+.comp-row{padding:8px 0;font-size:14.5px;border-bottom:1px solid var(--line-soft)}
+.comp-row:last-child{border-bottom:none}
+.comp-row b{color:var(--ink)}
+.comp-row span{color:var(--gray)}
+
+.pub{padding:7px 0;font-size:13.8px;color:var(--gray);border-bottom:1px solid var(--line-soft)}
+.pub:last-child{border-bottom:none}
+.pub .granted{color:var(--amber);font-weight:600}
+
+footer{padding:32px 0;border-top:1px solid var(--line)}
+.foot{display:flex;justify-content:space-between;font-size:13px;color:var(--gray-light)}
+:focus-visible{outline:2.5px solid var(--amber);outline-offset:2px;border-radius:4px}
+
+@media(max-width:640px){
+  .sheet{padding:36px 26px}
+  .nav-links a:not(.back){display:none}
+}
+@media print{
+  nav,footer,.r-actions{display:none}
+  body{background:#fff;font-size:12px}
+  .sheet{border:none;box-shadow:none;padding:0;margin:0}
+  .r-head{padding:0 0 16px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a href="index.html" class="logo">Robert Dowd<span>.</span></a>
+    <div class="nav-links">
+      <a href="index.html" class="back">← Back to site</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="r-head">
+    <h1>Robert Dowd</h1>
+    <div class="tagline">Business Strategy &amp; Operations · AI · Healthcare Technology · MBA Candidate (CU Boulder, Spring '27)</div>
+    <div class="contact">
+      <span>rdowd006@gmail.com</span><span>·</span>
+      <a href="https://linkedin.com/in/rdowd003" target="_blank" rel="noopener">linkedin.com/in/rdowd003</a><span>·</span>
+      <a href="https://github.com/rdowd003" target="_blank" rel="noopener">github.com/rdowd003</a><span>·</span>
+      <span>Denver, CO</span>
+    </div>
+    <div class="r-actions">
+      <!-- Replace href with your open-access Google Drive PDF link -->
+      <a href="#" class="btn btn-primary" id="pdfLink">Download PDF ↓</a>
+      <a href="index.html" class="btn btn-ghost">Back to site</a>
+    </div>
+  </div>
+
+  <div class="sheet">
+
+    <div class="r-section">
+      <h2>Professional Summary</h2>
+      <p class="summary">
+        Strategic leader with 11+ years partnering with C-suite executives to turn data and analytics into
+        operating decisions, scalable platforms, and high-performing teams. Consistent track record of entering
+        ambiguous, underdocumented environments and building the organizational clarity — frameworks, governance,
+        and cross-functional alignment — that drives measurable business outcomes. Deep expertise across data
+        strategy, AI/ML use-case prioritization, BI architecture, and operational program management in digital
+        health. Published researcher (84 citations), co-inventor on 6 patents, and MBA candidate.
+      </p>
+    </div>
+
+    <div class="r-section">
+      <h2>Professional Experience</h2>
+
+      <div class="job">
+        <div class="job-head">
+          <div><span class="co">Cylinder Health (Vivante Health)</span> <span class="loc">Denver, CO</span></div>
+          <div class="dates">Current</div>
+        </div>
+        <div class="title">Data &amp; Strategy Leader (Data Platform Architect)</div>
+        <ul>
+          <li><b>Executive analytics partner</b> to CEO, SVP Operations, CMO, and functional Directors; translate data, analysis, and strategic recommendations into weekly operating decisions on retention, growth, and resource allocation.</li>
+          <li><b>Lead data-enablement strategist for Operations:</b> embedded alongside SVP of Operations to diagnose data gaps, establish reliable data management practices, and drive execution of enterprise ops strategy across Member Marketing, Member Services, and Client Success.</li>
+          <li><b>Program-managed a 2-year enterprise data transformation:</b> redesigned warehouse architecture around a new identity-management system, established governance, and built a governed analytics layer — acting as internal consultant with no upstream data contracts or requirements from engineering. Reduced monthly data pipeline costs 50% through structural redesign and query optimization.</li>
+          <li><b>Ownership of retention &amp; engagement measurement strategy:</b> led end-to-end design and execution of a proprietary member engagement index — diagnosed measurement gaps, defined KPIs from first principles, and partnered with Marketing and Member Services to integrate the framework holistically across the member journey.</li>
+          <li><b>Driving KPI strategy across Marketing, Member Services, and Operations:</b> defining ROI frameworks, operational excellence metrics, and data-backed performance standards; serving as DS, DE, AI/ML, and Analytics SME for non-technical leadership.</li>
+          <li><b>Scaled infrastructure to support 2x client growth</b> (10–15 to 30+ enterprise clients) while reducing storage and compute costs ~20% through platform redesign and roadmap alignment with product and engineering.</li>
+          <li><b>Co-designed and prioritized the company's AI/ML strategy:</b> identified high-value use cases, supported build-vs-buy vendor evaluations, and helped establish investment criteria linking AI adoption to measurable ROI.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div><span class="co">Artemis Health</span> <span class="loc">Denver, CO</span></div>
+          <div class="dates">Aug 2022 – Nov 2023</div>
+        </div>
+        <div class="title">Manager, Data Science</div>
+        <ul>
+          <li><b>Built and managed a 6+ person data science team</b> (US and international); established hiring processes, operating model, and career development frameworks. Transformed the function from ad-hoc experimentation to roadmap-driven product delivery.</li>
+          <li><b>Owned the data science product roadmap</b> and cross-team engineering dependencies; sequenced delivery against business and client priorities, managed stakeholder expectations, and resolved cross-functional blockers.</li>
+          <li><b>Delivered 4 client-facing data products</b> — Social Determinants of Health Index, 5 chronic-condition risk-forecasting models, and a pipeline-wide anomaly-detection system — meaningfully improving client retention and satisfaction and contributing to 4–5 new enterprise client wins.</li>
+          <li><b>Reduced client-facing errors 80%</b> and eliminated 15+ hrs/week of manual QA across a 20-person team by redesigning the organization's quality assurance process through the anomaly-detection system.</li>
+          <li><b>Led enterprise innovation track</b> and delivered a half-day thought leadership workshop to 100+ benefits leaders, positioning Artemis as an industry authority.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div><span class="co">Dexcom Inc.</span> <span class="loc">San Diego, CA</span></div>
+          <div class="dates">May 2019 – Jun 2022</div>
+        </div>
+        <div class="title">Senior Data Scientist</div>
+        <ul>
+          <li><b>Architected and led Dexcom's real-world evidence (RWE) program:</b> a multi-year cross-functional initiative aligning Clinical, Regulatory, Marketing, and Sales to build an evidence portfolio supporting FDA submissions and market expansion into APAC and Eastern Europe.</li>
+          <li><b>Scoped, designed, and delivered a patented AI-driven algorithm</b> for personalized diabetes care delivery — led cross-functional alignment from concept through patent submission, translating clinical requirements into a production ML system.</li>
+          <li><b>Represented Dexcom on international stages</b> — presented research and real-world clinical evidence at multiple global conferences (audiences of 100+), directly supporting competitive positioning and lead generation in new markets.</li>
+          <li><b>Published 3 peer-reviewed papers</b> (84 citations, h-index: 3); research operationalized by Sales and Marketing for competitive positioning and lead generation.</li>
+          <li><b>Developed churn and forecasting models</b> that directly informed commercial strategy and product roadmap decisions at the business-unit level.</li>
+          <li><b>Served on PRIDE ERG executive board,</b> leading audit and redesign of talent-acquisition processes.</li>
+        </ul>
+      </div>
+
+      <div class="job compact">
+        <div class="job-head">
+          <div><span class="co">Beatport, LLC</span> <span class="loc">Denver, CO</span></div>
+          <div class="dates">Oct 2018 – Apr 2019</div>
+        </div>
+        <div class="title">Data Engineer</div>
+        <ul>
+          <li>Designed and launched the company's first data science recommendation engine, translating raw user behavior into personalized product discovery at scale; built and maintained core data pipelines supporting customer experience across the platform.</li>
+        </ul>
+      </div>
+
+      <div class="job compact">
+        <div class="job-head">
+          <div><span class="co">University of Rochester</span> <span class="loc">Rochester, NY</span></div>
+          <div class="dates">May 2015 – Jan 2017</div>
+        </div>
+        <div class="title">Research Data Analyst</div>
+        <ul>
+          <li>Designed and executed quantitative research projects using Python and SQL-based statistical analysis, contributing to published neuroscience studies and a grant-funded research program; presented findings to faculty and academic conferences.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="r-section">
+      <h2>Education</h2>
+      <div class="edu-row"><div><b>University of Colorado Boulder, Leeds School of Business</b> — MBA Candidate</div><div class="r">Expected May 2027</div></div>
+      <div class="edu-row"><div><b>University of Rochester</b> — B.S. Computational Neuroscience, Honors Distinction in Research Thesis</div><div class="r">2015</div></div>
+      <div class="edu-row"><div><b>Galvanize</b> — Data Science Immersive Bootcamp, Denver, CO</div><div class="r">2018</div></div>
+    </div>
+
+    <div class="r-section">
+      <h2>Core Competencies</h2>
+      <div class="comp-row"><b>Leadership &amp; Program Management:</b> <span>Team Building &amp; Mentorship, Cross-functional Program Leadership, Stakeholder Management, Executive Reporting, Roadmap Development, Hiring &amp; Talent Development, Workshop Facilitation</span></div>
+      <div class="comp-row"><b>Strategy &amp; Operations:</b> <span>Enterprise Ops Strategy, AI Strategy &amp; Use-Case Prioritization, Change Management, Process Design &amp; Automation, Build-vs-Buy Analysis, Cost Optimization, Go-to-Market Support</span></div>
+      <div class="comp-row"><b>Data &amp; Systems Design:</b> <span>Data Warehouse Architecture, Analytics Layer Design, KPI &amp; Metric Framework Development, Data Governance, Integration Strategy, Pipeline Architecture, BI Strategy, Looker</span></div>
+      <div class="comp-row"><b>Commercial &amp; Finance:</b> <span>ROI Analysis, Forecasting, Unit Economics, Sales Enablement, Client Acquisition &amp; Retention, Competitive Positioning</span></div>
+      <div class="comp-row"><b>Technical:</b> <span>Python, SQL, GCP, MLOps, ETL/ELT Pipelines, LLMs / GenAI, Scala</span></div>
+    </div>
+
+    <div class="r-section">
+      <h2>Publications &amp; Patents</h2>
+      <div class="pub">Dowd, R., et al. (2023). "Glycemic outcomes and feature set engagement among real-time CGM users." <i>JMIR Diabetes</i>, 8, e43991. (10 citations)</div>
+      <div class="pub">Akturk, H.K., Dowd, R., et al. (2021). "Real-world evidence and glycemic improvement using Dexcom G6 features." <i>Diabetes Technology &amp; Therapeutics</i>, 23(S1). (68 citations)</div>
+      <div class="pub">Dowd, R., et al. (2020). "Real-time CGM usage and estimates of glycaemic control." <i>Diabetologia</i>, 63(SUPPL 1).</div>
+      <div class="pub">Derdzinski, M., Dowd, R., et al. (2025). "Glucose measurement predictions using stacked ML models." US Patent 12,390,131 <span class="granted">[GRANTED]</span></div>
+      <div class="pub">Additional 5 patents (pending) and 3+ conference presentations in diabetes-management and glycemic-impact prediction.</div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="wrap foot">
+    <div>© 2026 Robert Dowd</div>
+    <div>Denver, Colorado</div>
+  </div>
+</footer>
+
+<script>
+// If the PDF link hasn't been set yet, make the button trigger the browser's print-to-PDF as a fallback.
+document.getElementById('pdfLink').addEventListener('click', function(e){
+  if(this.getAttribute('href') === '#'){ e.preventDefault(); window.print(); }
+});
+</script>
+</body>
+</html>
