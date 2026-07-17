@@ -64,15 +64,19 @@ nav{
 @media(max-width:820px){.nav-links a:not(.nav-cta){display:none}}
 
 /* ── HERO (split) ── */
-.hero{padding:80px 0 76px}
+.hero{padding:64px 0 72px}
 .hero-grid{display:grid;grid-template-columns:1.45fr .9fr;gap:64px;align-items:center}
 .hero h1{
-  font-size:clamp(36px,5vw,54px);font-weight:500;letter-spacing:-.01em;
+  font-size:clamp(34px,4.4vw,48px);font-weight:500;letter-spacing:-.01em;
 }
 .hero h1 em{font-style:italic;color:var(--amber)}
-.hero .sub{margin-top:26px;max-width:560px;font-size:18.5px;color:var(--gray)}
-.hero-ctas{margin-top:36px;display:flex;gap:12px;flex-wrap:wrap}
+.hero .sub{margin-top:22px;max-width:560px;font-size:18px;color:var(--gray)}
+.hero-ctas{margin-top:30px;display:flex;gap:12px;flex-wrap:wrap}
 .hero-ctas .btn{flex:0 0 auto}
+.hero-assess{margin-top:22px;max-width:520px}
+.hero-assess .assess-prompt{font-size:15px;color:var(--gray);margin-bottom:12px;line-height:1.55}
+.hero-assess .assess-prompt strong{color:var(--ink);font-weight:600}
+.hero-assess .btn-ghost{font-size:14.5px;padding:11px 22px}
 .btn{
   display:inline-block;padding:13px 26px;border-radius:8px;font-weight:600;font-size:15.5px;
   transition:all .15s ease;cursor:pointer;font-family:inherit;
@@ -290,10 +294,13 @@ footer{padding:36px 0;border-top:1px solid var(--line)}
         confidence instead of guesswork.
       </p>
       <div class="hero-ctas">
-        <a href="#work" class="btn btn-primary">See the work</a>
-        <a href="#assessment" class="btn btn-primary">Data maturity assessment</a>
         <a href="https://linkedin.com/in/rdowd003" target="_blank" rel="noopener" class="btn btn-primary">LinkedIn</a>
         <a href="resume.html" class="btn btn-primary">Resume / CV</a>
+        <a href="#work" class="btn btn-primary">See my work</a>
+      </div>
+      <div class="hero-assess">
+        <p class="assess-prompt">Curious where your organization really stands? Take <strong>my 6-question data maturity assessment</strong> — two minutes, straight to a diagnosis.</p>
+        <a href="#assessment" class="btn btn-ghost">Take the assessment →</a>
       </div>
     </div>
     <div class="portrait-col reveal">
